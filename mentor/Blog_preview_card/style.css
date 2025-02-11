@@ -3,15 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+.figtree {
+    font-family: "Figtree", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
 
 :root {
     --yellow: hsl(47, 88%, 63%);
     --White: hsl(0, 0%, 100%);
     --Gray500: hsl(0, 0%, 42%);
     --Gray950: hsl(0, 0%, 7%);
+    --paddin: 0.5rem 0;
 }
 
 body {
+    font-family: "Figtree", serif;
     height: 100vh;
     background-color: var(--yellow);
     display: flex;
@@ -21,10 +28,6 @@ body {
 
 .Blog-card {
     width: 23rem;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.7rem; */
     padding: 1rem;
     border: 1px solid var(--Gray950);
     border-radius: 1.2rem;
@@ -35,7 +38,17 @@ body {
     background-color: var(--White);
     box-shadow: 10px 10px;
 }
-
+.btn , section p , section h2 , footer{
+    padding: var(--paddin);
+}
+section h2:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+section :nth-child(4){
+    line-height: 1.5;
+    color: var(--Gray500);
+}
 .main-fig img {
     width: 20.5rem;
     border-radius: 0.6rem;
@@ -45,14 +58,24 @@ body {
     -o-border-radius: 0.6rem;
 }
 
-section .btn {
+section button {
     background-color: var(--yellow);
     font-weight: 900;
-    border-radius: 0.8rem;
     text-align: center;
-    padding: 0.3rem 0rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
+    width: 7rem;
+    padding: 0.4rem 0;
+    border: 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    height: inherit;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 800;
+    font-size: small;
+}
+footer img{
+    width: 1.8rem;
 }
